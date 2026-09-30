@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Личный кабинет пользователя">
+    <title>Локатор — Профиль</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+<header class="app-header">
+    <div class="header__inner">
+        <a href="index.html" class="header__back" aria-label="Назад">←</a>
+        <h1 class="header__title">Профиль</h1>
+        <button class="header__fav" aria-label="Настройки">⚙️</button>
+    </div>
+</header>
+
+<main class="app-main">
+
+    <section class="profile" aria-label="Профиль пользователя">
+        <div class="profile__avatar">А</div>
+        <h2 class="profile__name">Алексей Петров</h2>
+        <p class="profile__email">alexey@example.com</p>
+    </section>
+
+    <section class="profile-section" aria-label="Избранные места">
+        <h3 class="profile-section__title">❤️ Избранные места</h3>
+        <ul class="fav-list">
+            <li class="fav">
+                <div class="fav__icon">☕</div>
+                <div class="fav__info">
+                    <h4 class="fav__name">Кофейня «Утро»</h4>
+                    <p class="fav__addr">ул. Ленина, 15</p>
+                </div>
+            </li>
+            <li class="fav">
+                <div class="fav__icon">🌳</div>
+                <div class="fav__info">
+                    <h4 class="fav__name">Парк Горького</h4>
+                    <p class="fav__addr">наб. Реки, 2</p>
+                </div>
+            </li>
+            <li class="fav">
+                <div class="fav__icon">🍔</div>
+                <div class="fav__info">
+                    <h4 class="fav__name">Бургерная «Мясо»</h4>
+                    <p class="fav__addr">пр. Мира, 42</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="profile-section" aria-label="История поиска">
+        <h3 class="profile-section__title">🕐 История поиска</h3>
+        <ul class="fav-list">
+            <li class="fav">
+                <div class="fav__icon">🔍</div>
+                <div class="fav__info">
+                    <h4 class="fav__name">Кофе рядом</h4>
+                    <p class="fav__addr">Сегодня, 14:32</p>
+                </div>
+            </li>
+            <li class="fav">
+                <div class="fav__icon">🔍</div>
+                <div class="fav__info">
+                    <h4 class="fav__name">Парки в центре</h4>
+                    <p class="fav__addr">Вчера, 18:15</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+</main>
+
+<footer class="app-footer">
+    <p class="app-footer__text">© 2025 Локатор. Все права защищены.</p>
+</footer>
+
+<script src="js/main.min.js"></script>
+</body>
+</html>

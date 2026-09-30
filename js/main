@@ -1,0 +1,47 @@
+
+(function () {
+    'use strict';
+
+    var categories = document.querySelectorAll('.category');
+
+    categories.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            categories.forEach(function (b) {
+                b.classList.remove('category--active');
+            });
+            btn.classList.add('category--active');
+        });
+    });
+
+    var locateBtn = document.querySelector('.map__locate');
+
+    if (locateBtn) {
+        locateBtn.addEventListener('click', function () {
+            if (!navigator.geolocation) {
+                alert('Геолокация не поддерживается вашим браузером');
+                return;
+            }
+
+            navigator.geolocation.getCurrentPosition(
+                function (position) {
+                    console.log('Широта:', position.coords.latitude);
+                    console.log('Долгота:', position.coords.longitude);
+                },
+                function (error) {
+                    alert('Не удалось определить местоположение: ' + error.message);
+                }
+            );
+        });
+    }
+
+    var favBtns = document.querySelectorAll('.header__fav, .btn--outline');
+
+    favBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            var isActive = btn.dataset.fav === 'true';
+            btn.dataset.fav = isActive ? 'false' : 'true';
+            btn.textContent = isActive ? '♡' : '♥';
+        });
+    });
+
+})();
